@@ -1,0 +1,23 @@
+header {
+    background-color:#389c3b;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.363);
+    padding: 25px 20px; 
+    margin: 20px;
+}
+
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+div {
+    background-color: #67b66ab7;
+}
+
+div>p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+}

@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;;
+    height: 900px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.137);
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    flex: 1;
+    margin: 10px;
+    height: 150px;
+}
+
+.one {
+    background-color: #ff6b6b;
+}
+
+.two {
+    background-color: #4ecdc4;
+}
+
+.three {
+    background-color: #556270;
+}
