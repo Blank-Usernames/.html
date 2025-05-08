@@ -144,6 +144,11 @@ aside {
         height: 100px;
     }
 
+    .profile_image {
+        display: flex;
+        justify-content: center;
+    }
+
     .profile_info{
         padding: 10px;
     }
