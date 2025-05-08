@@ -139,11 +139,6 @@ aside {
         margin-top: 20px;
     }
 
-    .profile_image img {
-        width: 100px;
-        height: 100px;
-    }
-
     .profile_image {
         display: flex;
         justify-content: center;
