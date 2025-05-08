@@ -55,7 +55,7 @@ main {
 
 .profile_info p {
     padding: 10px;
-    text-align: justify;
+    text-align: left;
     color: rgba(0, 0, 0, 0.555);
 }
 
@@ -79,7 +79,7 @@ aside {
     background-color: #FFFFFF;
     margin: 15px;
     height: 90%;
-    width: 120%;
+    width: 280px;
     border-radius: 15px;
     box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.24);
 }
@@ -93,9 +93,79 @@ aside {
 }
 
 .projetos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 30px;
 }
 
 .projetos h1 {
-    padding: 15px;
+    white-space: nowrap;
+    padding-bottom: 15px;
+    padding-left: 5px;
+}
+
+.projetos p {
+    text-align: left;
+    padding: 5px;
+}
+
+.hobbies {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hobbies ul, .hobbies li {
+    list-style-position: inside;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+@media (max-width: 1280px) {
+    main {
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: auto;
+    }
+
+    .container_profile {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .profile {
+        margin-top: 20px;
+    }
+
+    .profile_image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile_info{
+        padding: 10px;
+    }
+
+    .profile_info h1 {
+        padding: 5px;
+        font-size: 1.6em;
+    }
+
+    .profile_info h2 {
+        padding: 5px;
+        font-size: 1.4em;
+    }
+
+    .profile_info p {
+        font-size: 1.2em;
+        line-height: 1.6em;
+    }
+
+    .container_hobbies {
+        flex-direction: column;
+        width: 300px;
+        height: 95%;
+    }
 }
