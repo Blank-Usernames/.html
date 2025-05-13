@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JavaScript</title>
+</head>
+
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 98vh;">
+    <h1>Testes com JavaScript!</h1>
+    <p>
+        <button onclick="onClick()">Clique Aqui</button>
+    </p>
+
+    <p>
+        Focus
+        <input type="text" onfocus="onFocus()">
+    </p>
+
+    <p>
+        Blur
+        <input type="text" onblur="onBlur()">
+    </p>
+
+    <p>
+        Change
+        <input type="text" onchange="onChange()">
+    </p>
+
+    <p onmouseover="onMouseover()">
+        Passe o Mouse
+    </p>
+</body>
+
+<script>
+    function onClick() {
+        console.log("Tamo clicando Tamo clicando")
+    }
+
+    function onFocus() {
+        console.log("FOCUS FOCUS FOCUS")
+    }
+
+    function onBlur() {
+        console.log("Isso é um onFocus ou onBlur?? :thinking:")
+    }
+
+    function onChange() {
+        console.log("!! Você alertou o onChange !!")
+    }
+
+    function onMouseover() {
+        console.log("!! Você alertou o onMouseover !!")
+    }
+</script>
+
+</html>
