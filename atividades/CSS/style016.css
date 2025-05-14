@@ -44,6 +44,7 @@ button {
 
 button:hover {
     background-color: #52a5ec;
+    transition-duration: 0.2s;
 }
 
 p {
