@@ -2,8 +2,8 @@ function passouMouse() {
     document.querySelector('.button').innerHTML = "<p>Passou o mouse</p>"
 }
 
-var count = 0
-var number = 1
+let count = 0
+let number = 1
 
 function clicouMouse() {
     count += 1
