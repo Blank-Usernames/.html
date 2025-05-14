@@ -8,7 +8,7 @@ var number = 1
 function clicouMouse() {
     count += 1
     number.innerHTML = count
-    document.querySelector('.button').innerHTML = "<p>Clicou com o mouse (</p>"+count+"<p>) vezes!</p>"
+    document.querySelector('.button').innerHTML = "<p>Clicou com o mouse ("+count+") vezes!</p>"
 }
 
 function tirouMouse() {
