@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Elementos</title>
+
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        hr {
+            border-color: black;
+        }
+
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Criando Elementos com JavaScript</h1>
+    <hr>
+
+    <p>Vamos criar um parágrafo abaixo utilizando DOM:</p>
+</body>
+
+<script>
+    const paragrafo = document.createElement('p')
+    paragrafo.innerHTML = "Este é um parágrafo criado com JavaScript!"
+    document.body.appendChild(paragrafo)
+</script>
+
+</html>
