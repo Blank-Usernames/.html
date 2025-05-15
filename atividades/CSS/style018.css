@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    background-color: rgb(228, 228, 228);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 90vh;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.404);
+    width: 340px;
+    height: 160px;
+}
+
+#submitName {
+    display: flex;
+    align-items: flex-start;
+}
+
+#displayName {
+    display: flex;
+    display: none;
+    align-items: flex-start;
+    padding: 10px;
+    width: 340px;
+    height: auto;
+}
+
+p {
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+label {
+    margin: 10px;
+}
+
+#inputNome {
+    width: 280px;
+    height: 30px;
+    padding: 0px 5px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.171);
+}
+
+#inputNome:focus {
+    outline: none;
+    border-color: rgba(68, 154, 207, 0.596);
+}
+
+button {
+    background-color: rgb(69, 143, 228);
+    color: white;
+    border: 2px rgb(27, 84, 150) solid;
+    border-radius: 5px;
+    margin: 15px 10px;
+    width: 70px;
+    height: 35px;
+}
+
+button:hover {
+    background-color: rgb(88, 158, 238);
+    transition-duration: 0.2s;
+}
