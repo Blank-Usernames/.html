@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tem que ve o nome ainda</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        hr {
+            border-color: black;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            height: 85vh;
+        }
+
+        p {
+            background-color: rgb(221, 221, 221);
+            border-radius: 5px;
+            border: 2px solid black;
+            padding: 15px;
+            font-size: 1.3em;
+        }
+
+        button {
+            border-radius: 5px;
+            border: 2px solid lightgray;
+            margin: 10px;
+            width: 120px;
+            height: 35px;
+        }
+
+        button:hover {
+            background-color: white;
+            transition-duration: 0.2s;
+        }
+        
+        .big {
+            width: 220px;
+            height: 135px;
+        }
+
+        section.size {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Manipulando Style com JavaScript</h1>
+    <hr>
+
+    <main>
+        <section class="background">
+            <button type="button" onclick="backgroundAzul()">Background Azul</button>
+            <button type="button" onclick="backgroundTransparente()">Reverter</button>
+        </section>
+
+        <section class="color">
+            <button type="button" onclick="colorCiano()">Color Ciano</button>
+            <button type="button" onclick="colorNormal()">Reverter</button>
+        </section>
+
+        <section class="font">
+            <button type="button" onclick="fonteBold()">Fonte Negrito</button>
+            <button type="button" onclick="fonteNormal()">Reverter</button>
+        </section>
+
+        <section class="size">
+            <button type="button" class="big" onclick="comicallyLarge()">Comically Large Button</button>
+            <button type="button" onclick="sizeNormal()">Reverter</button>
+        </section>
+
+        <p>Este parágrafo está sendo manipulado através do style em JavaScript!</p>
+    </main>
+</body>
+
+<script>
+    // Change Background-Color
+    function backgroundAzul () {
+        document.querySelector('p').style.backgroundColor = "blue"
+    }
+
+    function backgroundTransparente () {
+        document.querySelector('p').style.backgroundColor = "transparent"
+    }
+
+    
+    // Change Color
+    function colorCiano () {
+        document.querySelector('p').style.color = "cyan"
+    }
+
+    function colorNormal () {
+        document.querySelector('p').style.color = "black"
+    }
+
+
+    // Change Font-Weight
+    function fonteBold () {
+        document.querySelector('p').style.fontWeight = "bold"
+    }
+
+     function fonteNormal () {
+        document.querySelector('p').style.fontWeight = "normal"
+    }
+
+
+    // Change Font-Size
+    function comicallyLarge () {
+        document.querySelector('p').style.fontSize = "10em"
+    }
+
+    function sizeNormal () {
+        document.querySelector('p').style.fontSize = "1em"
+    }
+</script>
+
+</html>
