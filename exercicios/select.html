@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        
+        hr {
+            border-color: black;
+        }
+
+        main {
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .input {
+            margin: 15px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>&lt;select&gt;</h1>
+    <hr>
+
+    <main>
+        <div class="container">
+            <select onchange="verificar()">
+                <option value="habilitado">Habilitado</option>
+                <option value="desabilitado">Desabilitado</option>
+            </select>
+
+            <div class="input">
+                <label for="inputAtivar">Algum Texto:</label>
+                <input type="text" name="algum-texto">
+
+                <p id="mensagem"></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    function verificar() {
+        let valorSelect = document.querySelector('select').value
+
+        if(valorSelect == 'desabilitado') {
+            document.querySelector('input').disabled = true
+            let textoAviso = document.querySelector('#mensagem')
+            textoAviso.innerHTML = "DESABILITADO"
+            textoAviso.style.color = "white"
+            textoAviso.style.backgroundColor = "red"
+        }else{
+            document.querySelector('input').disabled = false
+            let textoAviso = document.querySelector('#mensagem')
+            textoAviso.innerHTML = ""
+            textoAviso.style.backgroundColor = "transparent"
+        }
+    }
+</script>
+
+</html>
