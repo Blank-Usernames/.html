@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 85vh;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        hr {
+            border-color: black;
+        }
+
+        .modalContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button {
+            color: white;
+            font-weight: bold;
+            border: none;
+            width: 170px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal {
+            background-color: rgba(0, 0, 0, 0.336);
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .modal .modalContent {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.247);
+            margin: 5% auto;
+            padding: 20px;
+            width: 20%;
+        }
+
+        .btnFechar {
+            background-color: #cf0a0a;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btnFechar:hover {
+            background-color: #df2828;
+            transition-duration: 0.2s;
+            transform: scale(1.05);
+        }
+
+        .btnAbrir {
+            background-color: #246fcf;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btnAbrir:hover {
+            background-color: #4585d8;
+            transition-duration: 0.2s;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+        <h1>Trabalhando com Modal</h1>
+        <hr>
+
+        <div class="modal">
+            <div class="modalContent">
+                <h1 class="modalTitle">Olá, eu sou um modal</h1>
+                <p class="modalText">
+                     Você pode me fechar clicando fora desta área
+                </p>
+                <button class="btnFechar">Clique aqui para fechar</button>
+            </div>
+        </div>
+
+        <main>
+            <h2>Aperte o botão para tornar o Modal vísivel</h2>
+            <button class="btnAbrir">Alternar Modal</button>
+        </main>
+</body>
+
+<script>
+    const btnAbrir = document.querySelector('.btnAbrir')
+    btnAbrir.addEventListener('click', modalInteract)
+
+    const btnFechar = document.querySelector('.btnFechar')
+    btnFechar.addEventListener('click', modalInteract)
+
+    function modalInteract() {
+        const modal = document.querySelector('.modal')
+        const estiloModal = modal.style.display
+
+        if(estiloModal == 'block'){
+            modal.style.display = 'none'
+        }else{
+            modal.style.display = 'block'
+        }
+    }
+</script>
+</html>
