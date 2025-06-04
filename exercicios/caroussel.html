@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroussel</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #slider {
+        position: relative;
+        width: 80%;
+        max-width: 900px;
+        height: 250vw;
+        max-height: 480px;
+    }
+
+    #slider img {
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 800ms;
+    }
+
+    #slider img.selected {
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <div id="slider">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.WfpStxJdEcmLAQ7Jdoe-AgHaEK?rs=1&pid=ImgDetMain" alt="image1" class="selected">
+        
+        <img src="https://tse4.mm.bing.net/th/id/OIP.36v_SALVY66wFjUDL6GSUQHaEP?rs=1&pid=ImgDetMain" alt="image2">
+
+        <img src="https://images.wallpapersden.com/image/download/starry-landscape-4k-cool-blue-moon_bW5tbG6UmZqaraWkpJRobWllrWdma2U.jpg" alt="image3">
+    </div>
+</body>
+
+<script>
+    let time = 2000 // Tempo de Rotação
+    let currentImageIndex = 0 // Primeira Imagem
+
+    const images = document.querySelector('#slider img') // Pegar as Imagens
+    let max = images.length // Tamanho das Imagens
+
+    function nextImage() { // Puxar a próxima imagem
+        images[currentImageIndex].classList.remove("selected") // Remover a classe do elemento atual
+        currentImageIndex++ // Incrementar o length das imagens
+
+        if(currentImageIndex >= max) { // Se o representativo da imagem atual for maior que o representativo da quantidade
+            currentImageIndex = 0 // Ele reseta o representativo da imagem
+        }else{
+            images[currentImageIndex].classList.add("selected") // Senão (ou seja, se o representativo da imagem for menor que o da quantidade) ele vai adicionar a classe selecionada
+        }
+    }
+</script>
+</html>
